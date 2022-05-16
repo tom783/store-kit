@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 import store from './stores';
 import { createGlobalStyle } from 'styled-components';
 import resetCss from 'sanitize.css';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 
 const GlobalStyles = createGlobalStyle`
  ${resetCss}
@@ -27,11 +29,16 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const queryClient = new QueryClient();
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <GlobalStyles />
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <ReactQueryDevtools initialIsOpen={false} />
+        <GlobalStyles />
+        <App />
+      </QueryClientProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
