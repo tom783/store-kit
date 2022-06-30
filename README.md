@@ -1,5 +1,5 @@
 <!-- Title -->
-### 👋 HellGround 👋 = Hello Ground
+#- 👋 HellGround 👋 = Hello Ground
 ![header](https://capsule-render.vercel.app/api?type=Waving&color=2D2B55&section=header&fontSize=60&fontColor=3178C6&stroke=F9CF00&animation=fadeIn&text=Hello%20Ground)
 
 # [ 📢Repository information ]
@@ -24,6 +24,6 @@ npm run storybook
 ```
 
 ### Goal
-## [ ] a
-## [x] b
-## [X] c
+- [ ] a
+- [x] b
+- [X] c
